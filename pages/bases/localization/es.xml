@@ -1,0 +1,276 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<properties>
+ 
+	<property name="title" value="Pizarra Blanca" />
+	<property name="user" value="Usuarios" />
+	<property name="document" value="Documento" />
+	<property name="video" value="Video" />
+	<property name="chat" value="Charla" />
+	<property name="buttonText" value="Pulse aquí para agregar un nuevo texto" />
+	<property name="buttonYoutubeVideo" value="Pulse aquí para agregar un nuevo video" />
+	<property name="divTextField" value="Campo para agregar un texto" />
+	<property name="buttonTextField" value="Salvar" />
+	
+	<property name="youTubeVideo.Title" value="Insertar video" />
+	
+	<property name="basicTemplate.btnReturn" value="Volver" />
+	<property name="basicTemplate.btnReturn.description" value="Volver a la página anterior" />
+	
+	<property name="roomTemplate.btnInsertYoutubeVideo" value="Insertar video" />
+	<property name="roomTemplate.YouTubeVideo" value="Inserte el enlace del video al que le gustaría agregar a la Pizarra Blanca" />
+	<property name="roomTemplate.btnInsertYoutubeVideo.description" value="Insertar video" />
+	<property name="roomTemplate.videoYouTubeURL.description" value="Pegue aquí el enlace del YouTube para su video favorito" />
+	
+	<property name="mvElementDescriptionAPointsL" value="Puntos a la izquierda" />
+	<property name="mvElementDescriptionAPointsR" value="Puntos a la derecha" />
+	<property name="mvElementDescriptionAPointsT" value="Puntos arriba" />
+	<property name="mvElementDescriptionAPointsB" value="Puntos abajo" />
+	<property name="mvElementDescriptionWidthB" value="Ancho de la caja" />
+	<property name="mvElementDescriptionHeightB" value="Altura de la caja" />
+	<property name="mvElementDescriptionXDisplacement" value="Horizontal" />
+	<property name="mvElementDescriptionXDisplacL" value="Izquierda" />
+	<property name="mvElementDescriptionXDisplacR" value="Derecha" />
+	<property name="mvElementDescriptionYDisplacement" value="Vertical" />
+	<property name="mvElementDescriptionYDisplacT" value="Arriba" />
+	<property name="mvElementDescriptionYDisplacB" value="Abajo" />
+	<property name="mvElementButtonMove" value="Mover" />
+	<property name="mvElementButtonMove.description" value="Mover elemento" />
+	
+	<property name="mvElement.title" value="Mover elemento" />
+	<property name="mvElement.horizontalMovement.description" value="Digite lo mucho que desea que se mueva el elemento horizontalmente" />
+	<property name="mvElement.verticalMovement.description" value="Digite lo mucho que desea que se mueva el elemento verticalmente" />
+	<property name="mvElement.moveLeft.description" value="Mover elemento hacia la izquierda" />
+	<property name="mvElement.moveRight.description" value="Mover elemento hacia la derecha" />
+	<property name="mvElement.moveTop.description" value="Mover hacia arriba" />
+	<property name="mvElement.moveBottom.description" value="Mover hacia abajo" />
+	
+	<property name="userPage.roomCodeTitle" value="Digite el código enviado a su e-mail para entrar en la sala" />
+	<property name="userPage.roomCodeUserPage" value="Si usted recibió una invitación por correo electrónico, haga clic en la imagen:" />
+	<property name="userPage.uptUser" value="Actualizar su cuenta" />
+	<property name="userPage.createRoom" value="Crear nueva sala" />
+	<property name="userPage.btnClose" value="Cerrar ventana" />
+	<property name="userPage.btnLogout" value="Salir del sistema" />
+	<property name="userPage.requiredField" value="*Campo obligatorio" />
+	<property name="userPage.comboBox.newProcuction" value="Nueva producción" />
+	<property name="userPage.roomOwner" value="Dueño de la Sala: " />
+	<property name="userPage.uptUser.description" value="Actualizar su cuenta" />
+	<property name="userPage.createRoom.description" value="Crear una nueva sala" />
+	<property name="userPage.btnClose.description" value="Cerrar esta ventana" />
+	<property name="userPage.btnLogout.description" value="Pulse para salir del sistema" />
+	<property name="userPage.roomCode.description" value="Digite aquí el código enviado a su e-mail para entrar en la sala" />
+	<property name="userPage.roomCode2.description" value="Si usted recibió una invitación por correo electrónico, haga clic aquí" />
+	
+	<property name="loginForm.email" value="E-mail" />
+	<property name="loginForm.password" value="Contraseña" />
+	<property name="loginForm.submit" value="Entar" />
+	<property name="loginForm.btnRegister" value="Regístrese" />
+	<property name="loginForm.email.description" value="Informe su e-mail" />
+	<property name="loginForm.password.description" value="Informe su contraseña" />
+	<property name="loginForm.submit.description" value="Pulse el botón para entrar en el sistema" />
+	<property name="loginForm.btnRegister.description" value="Pulse el botón para registrarse en el sistema" />
+	
+	<property name="registerForm.title" value="Formulario de registro" />
+	<property name="registerForm.name" value="Nombre*" />
+	<property name="registerForm.email" value="E-mail*" />
+	<property name="registerForm.password" value="Contraseña*" />
+	<property name="registerForm.confirmPassword" value="Confirmar contraseña*" />
+	<property name="registerForm.submit" value="Registrar" />
+	<property name="registerForm.name.description" value="Informe su nombre" />
+	<property name="registerForm.email.description" value="Informe su e-mail" />
+	<property name="registerForm.password.description" value="Informe su contraseña" />
+	<property name="registerForm.confirmPassword.description" value="Informe su contraseña nuevamente" />
+	<property name="registerForm.submit.description" value="Pulse el botón para registrarse en el sistema" />
+
+	<property name="newRoomForm.title" value="Crear nueva sala" />
+	<property name="newRoomForm.name" value="Nombre de la sala*" />
+	<property name="newRoomForm.submit" value="Crear sala" />
+	<property name="newRoomForm.srcUserName" value="Buscar usuario" />
+	<property name="newRoomForm.permissionsTitle" value="Permisos de la sala" />
+	<property name="newRoomForm.name.description" value="Informe el nombre de la nueva sala" />
+	<property name="newRoomForm.submit.description" value="Pulse el botón para crear la nueva sala" />
+	<property name="newRoomForm.srcUserName.description" value="Digite el nombre del usuario al que desea permitir que entre en la sala" />
+	<property name="newRoomForm.listAllUsers.description" value="Lista que contiene a todos los usuarios disponibles para elección" />
+	<property name="newRoomForm.listSelectedUsers.description" value="Lista de usuarios autorizados a entrar en la sala" />
+	<property name="newRoomForm.btnRight.description" value="Permitirle al usuario seleccionado que entre en la sala" />
+	<property name="newRoomForm.btnLeft.description" value="Desautorizarle al usuario seleccionado que entre en la sala" />
+	
+	<property name="updateUserForm.title" value="Actualizar datos del usuario" />
+	<property name="updateUserForm.email" value="E-mail" />
+	<property name="updateUserForm.password" value="Nueva contraseña" />
+	<property name="updateUserForm.confirmPassword" value="Confirmar nueva contraseña" />
+	<property name="updateUserForm.submit" value="Actualizar" />
+	<property name="updateUserForm.whatChange" value="¿Qué desea actualizar?" />
+	<property name="updateUserForm.opEmail" value="E-mail" />
+	<property name="updateUserForm.opPassword" value="Contraseña" />
+	<property name="updateUserForm.email.description" value="Informe su nuevo e-mail" />
+	<property name="updateUserForm.password.description" value="Informe la nueva contraseña" />
+	<property name="updateUserForm.confirmPassword.description" value="Informe la nueva contraseña nuevamente" />
+	<property name="updateUserForm.submit.description" value="Pulse el botón para actualizar" />
+	<property name="updateUserForm.checkEmail.description" value="Marque esta opción para actualizar su e-mail" />
+	<property name="updateUserForm.checkPassword.description" value="Marque esta opción para actualizar su contraseña" />
+	
+	<property name="updateRoomForm.title" value="Actualizar datos de la sala" />
+	<property name="updateRoomForm.roomName" value="Nombre de la Sala*" />
+	<property name="updateRoomForm.submit" value="Actualizar" />
+	<property name="updateRoomForm.roomName.description" value="Informe el nombre de la sala" />
+	<property name="updateRoomForm.submit.description" value="Pulse el botón para actualizar" />
+
+	<property name="listRoons.title" value="Elija una sala para entrar:" />
+	<property name="listRoons.enterRoom" value="Entrar en la sala" />
+	<property name="listRoons.editRoom" value="Editar sala" />
+	<property name="listRoons.sendEmail" value="Invitar a amigos" />
+	<property name="listRoons.enterRoom.description" value="Entrar en la sala" />
+	<property name="listRoons.editRoom.description" value="Editar el nombre y los permisos de esta sala" />
+	<property name="listRoons.sendEmail.description" value="Envíeles un e-mail a otros amigos para que participen de la sala" />
+	
+	<property name="inviteFriendForm.title" value="Invitar a amigos" />
+	<property name="inviteFriendForm.message" value="Escriba una invitación a sus amigos" />
+	<property name="inviteFriendForm.submit" value="Invitar" />
+	<property name="inviteFriendForm.defaultMessage" value="Usted ha sido invitado a participar de una sala en la Pizarra Blanca. Entre en el sitio http://whiteboard.inf.poa.ifrs.edu.br/ y haga su login. Copie el código a continuación y péguelo en el área indicada en el sitio y se le reorientará a la sala de su amigo." />
+	<property name="inviteFriendForm.emailTitle" value="Pizarra Blanca" />
+	<property name="inviteFriendForm.message.description" value="Escribir una invitación a sus amigos o deje en blanco y un mensaje patrón se enviará" />
+	<property name="inviteFriendForm.submit.description" value="Pulse el botón para enviar la invitación" />
+	
+	<property name="dialogLoadProduction.description" value="Seleccione el trabajo al que le gustaría cargar:" />
+	<property name="dialogLoadProduction.btnLoadProduction" value="Cargar" />
+	<property name="dialogLoadProduction.btnLoadProduction.description" value="Pulse para cargar el trabajo seleccionado" />
+	
+	<property name="roomTemplate.msgSave" value="Todas las alteraciones se salvarán automáticamente" />
+	<property name="roomTemplate.chat" value="Charla" />
+	<property name="roomTemplate.users" value="Amigos en línea" />
+	<property name="roomTemplate.inviteFriendBtn" value="Invitar a amigos" />
+	<property name="roomTemplate.btnPlay" value="Iniciar" />
+	<property name="roomTemplate.btnStop" value="Parar" />
+	<property name="roomTemplate.sendMsgBtn" value="Enviar mensaje" />
+	<property name="roomTemplate.sendMsgBtn.description" value="Pulse para mandar el mensaje que ha escrito usted" />
+	<property name="roomTemplate.sendMsgEnter" value="Escriba su mensaje y pulse la tecla ENTER para enviarlo" />
+	<property name="roomTemplate.inviteFriendBtn.description" value="Envíeles un e-mail a sus amigos para que se junten a usted en esta sala" />
+	<property name="roomTemplate.btnPlay.description" value="Inicia la transmisión de su WebCam" />
+	<property name="roomTemplate.btnStop.description" value="Para la transmisión de su WebCam" />
+	
+	<property name="roomTemplate.playStopStreamBtn" value="Tocar/Parar" /> 
+	<property name="roomTemplate.playStopStreamBtn.description" value="Pulse aquí para mostrar u ocultar su WebCam" />  
+	<property name="roomTemplate.publishStreamBtn" value="Publicar" /> 
+	<property name="roomTemplate.publishStreamBtn.description" value="Pulse aquí para transmitir su webcam" />
+	
+	<property name="roomTemplate.dialogShortcuts.Title" value="Atajos" />
+	<property name="roomTemplate.dialogHelp.Title" value="Ayuda" />
+	<property name="roomTemplate.dialogHelpLibras.Title" value="Ayuda - Libras" />
+	<property name="roomTemplate.dialogHelpAudio.Title" value="Ayuda - Audio" />
+	<property name="roomTemplate.dialogLoadProduction.Title" value="Cargar producción anterior" />
+	<property name="roomTemplate.dialogRoomCode.Title" value="Entrar en la sala" />
+	
+	<property name="roomTemplate.btnExitRoom.description" value="Salir de esta sala y volver a la página anterior" />
+	<property name="roomTemplate.btnFontMore.description" value="Pulse para aumentar el tamaño de las letras del sistema" />
+	<property name="roomTemplate.btnFontLess.description" value="Pulse para disminuir el tamaño de las letras del sistema" />
+	<property name="roomTemplate.btnShortcuts.description" value="Muestra lista con los atajos disponibles en el sistema" />
+	<property name="roomTemplate.btnHelp.description" value="Abrir la guía de ayuda." />
+	<property name="roomTemplate.btnHelpLibras.description" value="Abrir instrucciones para ayuda en libras" />
+	<property name="roomTemplate.btnHelpAudio.description" value="Abrir instrucciones para ayuda en audio" />
+	
+	<property name="roomTemplate.mainMenu.btnText" value="Texto" />
+	<property name="roomTemplate.mainMenu.btnYoutubeVideo" value="Video" /> 
+	<property name="roomTemplate.mainMenu.btnImage" value="Imagen" />
+	<property name="roomTemplate.mainMenu.btnRolateLeft" value="Girar imagen" />
+	<property name="roomTemplate.mainMenu.btnRolateRight" value="Girar imagen" />
+	<property name="roomTemplate.mainMenu.btnDelete" value="Excluir" />
+	<property name="roomTemplate.mainMenu.btnPosition" value="Posición" />
+	<property name="roomTemplate.mainMenu.btnOpenProduction" value="Abrir producción" />
+	<property name="roomTemplate.mainMenu.btnText.description" value="Agrega un campo para que usted inserte un texto dentro de la Pizarra Blanca" />
+	<property name="roomTemplate.mainMenu.btnYoutubeVideo.description" value="Agrega un campo para que usted pegue el código del video al que ha copiado" />
+	<property name="roomTemplate.mainMenu.btnImage.description" value="Insertar una imagen en la Pizarra Blanca" />
+	<property name="roomTemplate.mainMenu.btnRolateLeft.description" value="Girar imagen hacia la izquierda" />
+	<property name="roomTemplate.mainMenu.btnRolateRight.description" value="Girar imagen hacia la derecha" />
+	<property name="roomTemplate.mainMenu.btnDelete.description" value="Elimina el elemento con el foco en la Pizarra Blanca" />
+	<property name="roomTemplate.mainMenu.btnPosition.description" value="Abrir formulario para mover el elemento" />
+	<property name="roomTemplate.mainMenu.btnOpenProduction.description" value="Abre un trabajo anterior" />
+	
+	<property name="error.closeRoom" value="La sala indicada no está abierta para uso" />
+	<property name="error.eduquitoCloseRoom" value="La sala todavía no se encuentra activa. El coordinador del curso deberá activarla. Por favor, intente más tarde nuevamente." />
+	<property name="error.eduquitoWithoutPermission" value="Usted no tiene permiso para participar de esta sala" />
+	<property name="error.eduquitoInsufficientData" value="Faltan datos para enviar" />
+	<property name="error.plataform.closeRoom" value="La sala todavía no se encuentra activa. El profesor deberá activarla. Por favor, intente más tarde nuevamente." />
+	<property name="error.plataform.withoutPermission" value="Usted no tiene permiso para participar de esta sala" />
+	<property name="error.plataform.insufficientData" value="Faltan datos para enviar" />
+	<property name="error.retrieveRoom" value="No ha sido posible recuperar una sala del sistema" />
+	<property name="error.blankField" value="Hay campos obligatorios no rellenados" />
+	<property name="error.incompatiblePasswords" value="Las contraseñas digitadas no corresponden" />
+	<property name="error.invalidCode" value="El código informado no es válido" />
+	<property name="error.loginFail" value="El usuario o la contraseña no están correctos" />
+	<property name="error.wrongEmail" value="La dirección de e-mail no es válida" />
+	<property name="error.unavailableEmail" value="La dirección de e-mail insertada ya se encuentra en uso" />
+	<property name="error.noFocusedElement" value="Para utilizar esta función ajuste el foco em un elemento utilizando la tecla TAB" />
+	
+	<property name="logArea.updateTextPosition" value="La posición de un texto ha sido alterada por" />
+	<property name="logArea.updateVideoPosition" value="La posición de un video ha sido alterada por" />
+	<property name="logArea.updateImagePosition" value="La posición de una imagen ha sido alterada por" />
+	
+	<property name="logArea.updateTextDimension" value="La dimensión de un texto ha sido alterada por" />
+	<property name="logArea.updateVideoDimension" value="La dimensión de un video ha sido alterada por" />
+	<property name="logArea.updateImageDimension" value="La dimensión de una imagen ha sido alterada por" />
+	
+	<property name="logArea.updateTextContent" value="El contenido de un texto ha sido alterado por" />
+	<property name="logArea.updateVideoContent" value="La URL de un video ha sido alterada por" />
+	<property name="logArea.updateImageContent" value="Una imagen ha sido alterada por" />
+	
+	<property name="logArea.newText" value="Un nuevo texto ha sido creado por" />
+	<property name="logArea.newVideo" value="Un nuevo video ha sido creado por" />
+	<property name="logArea.newImage" value="Una nueva imagen ha sido creada por" />
+	
+	<property name="logArea.rmvText" value="Un texto ha sido removido por" />
+	<property name="logArea.rmvVideo" value="Un video ha sido removido por" />
+	<property name="logArea.rmvImage" value="Una imagen ha sido removido por" />
+	
+	<property name="logArea.owner" value="usted" />
+	
+	<property name="chat.Say" value="dice" />
+	
+	<property name="delete.label" value="¿Está seguro de que desea excluir el elemento seleccionado?" />
+	
+	<property name="cancel.label" value="¿Está seguro de que cancelar la inserción del texto?" />
+	
+	<property name="start.chatButton" value="Enviar" />
+	
+	<property name="dialogShortCuts.title1" value="Funcionalidades del sistema:" />
+	<property name="dialogShortCuts.CreateText" value="Crear una Caja de Texto:" />
+	<property name="dialogShortCuts.CreateText.1" value="Ctrl + espacio – confirma la creación de la caja de texto (salva)" />
+	<property name="dialogShortCuts.CreateText.2" value="Esc - Cancela la operación" />
+	<property name="dialogShortCuts.CreateText.3" value="Clic de Ratón (derecho) fuera de la caja de texto – confirma la opción (salva)" />
+	<property name="dialogShortCuts.Drag" value="Control del Arrastre de una Caja de Texto o Video:" />
+	<property name="dialogShortCuts.Drag.1" value="Ctrl + Clic de Ratón (derecho) = parar o iniciar el arrastre de una caja de texto" />
+	<property name="dialogShortCuts.Drag.2" value="Foco + Ctrl + M = Abre formulario para mover elemento" />
+	<property name="dialogShortCuts.Delete" value="Excluir una Caja de Texto o Video:" />
+	<property name="dialogShortCuts.Delete.1" value="Shift + Clic de Ratón (derecho) = Excluye por medio de una confirmación" />
+	<property name="dialogShortCuts.Delete.2" value="Foco + Del = Excluye por medio de una confirmación" />
+	<property name="dialogShortCuts.Update" value="Doble Clic de Ratón (derecho) = Actualiza una cajá de texto" />
+	<property name="dialogShortCuts.Update.1" value="Doble Clic de Ratón (derecho) = Actualiza una cajá de texto" />
+	<property name="dialogShortCuts.Update.2" value="Foco + Shift = Actualiza una caja de texto" />
+	<property name="dialogShortCuts.title2" value="Botones del sistema:" />
+	<property name="dialogShortCuts.login" value="En la página de login:" />
+	<property name="dialogShortCuts.login.email" value="Alt + L = Laguna del e-mail;" />
+	<property name="dialogShortCuts.login.password" value="Alt + P = Laguna de la contraseña;" />
+	<property name="dialogShortCuts.login.enter" value="Alt + S = Botón para entrar en el sistema;" />
+	<property name="dialogShortCuts.login.register" value="Alt + R = Botón para registrarse;" />
+	<property name="dialogShortCuts.userPage" value="Dentro del área del usuario:" />
+	<property name="dialogShortCuts.userPage.exit" value="Alt + E = Botón para salir del Sistema;" />
+	<property name="dialogShortCuts.userPage.update" value="Alt + U = Botón para actualizar la cuenta;" />
+	<property name="dialogShortCuts.userPage.newRoom" value="Alt + N = Botón para crear una nueva sala;" />
+	<property name="dialogShortCuts.userPage.inputRoomCode" value="Alt + C = Laguna para poner el código de la sala;" />
+	<property name="dialogShortCuts.userPage.btnRoomCode" value="Alt + R = Botón entrar en la sala;" />
+	<property name="dialogShortCuts.roomTemplate" value="Dentro de una sala:" />
+	<property name="dialogShortCuts.roomTemplate.btnText" value="Alt + T = Botón para agregar un Texto;" />
+	<property name="dialogShortCuts.roomTemplate.btnVideo" value="Alt + V = Botón para agregar un video;" />
+	<property name="dialogShortCuts.roomTemplate.btnImage" value="Alt + I = Botón para adjuntar una imagen;" />
+	<property name="dialogShortCuts.roomTemplate.btnRolateL" value="Alt + L = Botón para girar una imagen hacia la izquierda;" />
+	<property name="dialogShortCuts.roomTemplate.btnRolateR" value="Alt + R = Botón para girar una imagen hacia la derecha" />
+	<property name="dialogShortCuts.roomTemplate.btnOpenProduction" value="Alt + O = Botón para abrir una producción anterior;" />
+	<property name="dialogShortCuts.roomTemplate.btnExit" value="Alt + E = Botón para salir de la sala;" />
+	<property name="dialogShortCuts.roomTemplate.inputChat" value="Alt + M = Laguna para escribir en el chat;" />
+	<property name="dialogShortCuts.roomTemplate.btnSendMessage" value="Alt + S = Botón para enviar mensajes en el chat;" />
+	<property name="dialogShortCuts.roomTemplate.btnInviteFriends" value="Alt + F = Botón para invitar a amigos;" />
+	<property name="dialogShortCuts.roomTemplate.btnModalShortCuts" value="Alt + A = Botón para abrir ventana modal de atajos;" />
+	<property name="dialogShortCuts.roomTemplate.btnModalHelp" value="Alt + H = Botón para abrir la ventana modal de ayuda;" />
+	<property name="dialogShortCuts.roomTemplate.btnPublishCam" value="Alt + P = Botón para publicar la webCam;" />
+	<property name="dialogShortCuts.roomTemplate.btnPlayStopCam" value="Alt + Q = Botón para tocar/parar la WebCam;" />
+	
+</properties>

@@ -1,0 +1,525 @@
+/**
+ * Copyright 2011 - Nucleo de Informatica na Educacao Especial (NIEE) 
+ * 
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ * 
+ *     http://www.apache.org/licenses/LICENSE-2.0
+ * 
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ */
+
+.box {
+	width: 300px;
+	height: 70px; 
+	background: #D8D8D8;
+	
+	word-wrap:break-word;
+	
+	resize:both;
+	overflow:auto;
+	
+	border:1px solid;
+	border-color: #D8D8D8 ;
+	border-radius:4px;
+	-moz-border-radius:4px;	
+}
+
+.credits {
+	width: 500px;
+	height: 500px; 
+	background: #D8D8D8;
+	
+	position:fixed;
+	left: 50%;
+	margin-left: -250px;
+	top: 10%;
+	
+	border-radius:4px;
+	-moz-border-radius:4px;	
+		
+	box-shadow: 5px 5px 1px 1px #888888;
+  	border-radius:5px;
+  	
+  	padding: 10px;
+}
+
+.tip {
+	display: none;
+}
+
+textarea{
+	border:1px solid;
+	border-color: #D8D8D8;
+	border-radius:4px;
+	width: 400px;
+	height: 45px;
+}
+
+.youtubeVideo { 
+	border:5px solid; 
+	border-color: #D8D8D8; 
+ 	border-radius:4px; 
+ }
+
+
+.login{
+	position:fixed;
+	left: 50%;
+	margin-left: -165px;
+	top: 30%;
+
+	width: 350px;
+	height: 215px;
+		
+	background-image: url('../../images/panelFormLogin.gif');
+	
+	font-family: Arial, Helvetica, sans-serif;
+	font-size:80%;
+}
+
+.login #inputs {
+	float: right;
+	
+	width: 225px; 
+	height: 47px; 
+	
+	margin-right: 15px; 
+	margin-top: 65px;
+	padding-top: 3px;
+}
+
+.login #lblEmail {
+	float: right; 
+	
+	width: 85px; 
+	height: 20px; 
+	
+	margin-right: 10px; 
+	margin-top: 65px; 
+	padding-top: 5px;
+	
+	text-align: right; 
+}
+
+.login #lblPassword {
+	float: right; 
+	
+	width: 85px; 
+	height: 20px; 
+	
+	margin-right: 10px;
+	padding-top: 5px; 
+	
+	text-align: right; 
+}
+
+.login #buttons{
+	float: left; 
+	
+	width: 50%; 
+	height: 25px; 
+	
+	margin-top: 20px;
+
+	text-align: center;
+}
+
+.login #bottomTips {
+	float: left; 
+	
+	width: 100%; 
+	height: 25px; 
+	
+	margin-top: 24px; 
+	
+	text-align: center; 
+}
+
+.login .input {
+	border: solid 0px #000000;
+	
+	cursor: text;	
+}
+
+.login #textPassword {
+	margin-top: 7px;
+}
+
+.login #textSubmit {
+	border: solid 0px #000000;
+	width: 142px; 
+	height: 24px;
+	background-image: url('../../images/btnBlue.gif');
+}
+
+.login #textbtnRegister {
+	border: solid 0px #000000;
+	width: 142px; 
+	height: 24px;
+	background-image: url('../../images/btnBlue.gif');
+}
+
+.line {
+	text-align: right;
+	margin-top: 5px;
+}
+
+.left {
+	float: left;
+	width: 35%;
+	text-align: left;
+}
+
+.registerForm .left {
+	float: left;
+	width: 30%;
+	text-align: left;
+}
+
+.moveElementForm .left {
+	float: left;
+	width: 47%;
+	text-align: right;
+}
+
+.moveElementForm .right {
+	float: right;
+	width: 53%;
+	text-align: right;
+}
+
+.lLeft {
+	float: left;
+}
+
+.bLeft {
+	float: left;
+	margin-left: 10px;
+	margin-right: 10px;
+	line-height: 160px;
+}
+
+.center {
+	text-align: center;
+	width: 100%;
+}
+
+.userPage{
+	width: 625px;
+	
+	position:fixed;
+	
+	left: 37%;
+	top: 23%;
+	
+	margin-left: -165px;
+	margin-top: -67px;
+	
+	font-family: Arial, Helvetica, sans-serif;
+	font-size:70%;
+}
+
+.userPage #topMenu {
+	width: 100%;
+	height: 55px;
+	background-image: url('../../images/topMenuPuzzle.gif');
+}
+
+.userPage #tipsBar {
+	width: 100%;
+	height: 34px;
+	background-image: url('../../images/tipsBarPuzzle.gif');
+	
+	text-align: center;
+	line-height:35px;
+}
+
+.userPage #panelEnterRoom {
+	width: 250px;
+	height: 160px;
+	background-image: url('../../images/panelEnterRoomCode.gif');
+	float: right;
+}
+
+.userPage #panelUptUser {
+	width: 250px;
+	height: 100px;
+	background-image: url('../../images/panelUpdateUserAccount.gif');
+	
+	float: right;
+}
+
+.userPage #panelPublicity {
+	width: 625px;
+	height: 50px;
+	background-image: url('../../images/panelPublicity.gif');
+	float:left;
+}
+
+.userPage #titleListRooms {
+	padding-top: 10px;
+	padding-left: 25px;
+	padding-bottom: 10px;
+	
+	font-size: medium;
+}
+
+.userPage #listRooms {
+	width: 375px;
+	height: 260px;
+	background-image: url('../../images/panelListRooms.gif');
+	
+	float: left;
+}
+
+.userPage #boxRooms {
+	width: 355px;
+	height: 175px;
+	
+	overflow:auto;	
+} 
+
+.userPage #comboBoxIdProduction {
+	width: 115px;
+	
+	border-bottom-left-radius: 0px;
+	border-top-left-radius: 0px;
+}
+
+.userPage .btnEnterRoom {
+	border: solid 0px #000000;
+	width: 162px; 
+	height: 21px;
+	cursor: pointer;
+	
+	background-image: url('../../images/btnEnterRoom.gif');
+	
+	margin-left: 20px;
+	margin-bottom: 4px;
+}
+
+.userPage .btnEditRoom {
+	border: solid 0px #000000;
+	width: 21px; 
+	height: 23px;
+	cursor: pointer;
+	
+	background-image: url('../../images/btnEditRoom.gif');
+}
+
+.userPage .btnRoom {
+	border: solid 0px #000000;
+	width: 21px; 
+	height: 23px;
+	cursor: pointer;
+	
+	background-image: url('../../images/btnRoom.gif');
+}
+
+.userPage #btnOpenNewRoomForm {
+	border: solid 0px #000000;
+	width: 142px; 
+	height: 24px;
+	cursor: pointer;
+	
+	background-image: url('../../images/btnBlue.gif');
+	
+	margin-left: 116px;
+	margin-top: 0px;
+}
+
+.userPage #btnEnterRoomCode {
+	border: solid 0px #000000;
+	width: 142px; 
+	height: 24px;
+	cursor: pointer;
+	
+	background-image: url('../../images/btnBlue.gif');
+	
+	margin-left: 35px;
+	margin-top: 10px;
+}
+
+.userPage #btnUpdateAccount {
+	width: 52px; 
+	height: 42px;
+	
+	border: solid 0px #000000;
+	cursor: pointer;
+	
+	background-image: url('../../images/btnUpdateAccount.gif');
+}
+
+.userPage #btnModalRoomCode {
+	width: 100px; 
+	height: 80px;
+	
+	border: solid 0px #000000;
+	cursor: pointer;
+	
+	background-image: url('../../images/btnEnterRoomCode.gif');
+}
+
+.userPage #btnLogoutUserPage {
+	background-image: url('../../images/btnLogout.gif');
+	border: solid 0px #000000;
+	width: 29px; height: 28px;
+	cursor: pointer;	
+}
+
+.userPage #buttonsAccessibility{
+	width: 80px;
+	height: 44px;
+	
+	float:left;
+	
+	margin-top: 4px;
+	margin-left: 222px;
+	
+	background-image: url('../../images/buttonsOthers.gif');
+}
+
+#btn2 {
+	background-image: url('../../images/btn2.gif');
+}
+
+#btn3 {
+	background-image: url('../../images/btn3.gif');
+}
+
+#buttonsAccessibility{
+	width: 192px;
+	height: 44px;
+	
+	float: left;
+	
+	margin-top: 4px;
+	margin-left: 240px;
+	
+	background-image: url('../../images/buttonsAccessibility.gif');
+}
+
+#buttonsAccessibility input{
+	width: 29px;
+	height: 28px;
+	
+	float: left;
+	
+	margin-top: 8px;
+	margin-left: 7px;
+	
+	border: solid 0px #000000;
+	width: 29px; height: 28px;
+	cursor: pointer;
+	
+}
+
+#buttonsOthers{
+	width: 80px;
+	height: 44px;
+	
+	float:right;
+	
+	margin-top: 4px;
+	margin-right: 7px;
+	
+	background-image: url('../../images/buttonsOthers.gif');
+}
+
+#buttonsOthers input{
+	width: 29px;
+	height: 28px;
+
+	float: left;
+	
+	margin-top: 8px;
+	margin-left: 7px;
+	
+	border: solid 0px #000000;
+	width: 29px; height: 28px;
+	cursor: pointer;
+	
+}
+
+#logo{
+	width: 208px;
+	height: 36px;
+	
+	float: left;
+	
+	margin-top: 9px;
+	margin-left: 9px;
+	
+	background-image: url('../../images/logoQuadroBranco.gif');
+}
+
+.divError{
+	position:fixed;
+	left: 50%;
+	margin-left: -165px;
+	top: 40%;
+	margin-top: -67px;
+	border:1px solid;
+	border-color: #D8D8D8;
+	box-shadow: 10px 10px 5px #888888;
+	width: 350px;
+	height: 135px;
+	padding: 15px;
+	
+  	background-color:#DEDEDD;
+  	border-radius:10px;
+  
+}
+
+.input {
+	border: solid 0px #000000;
+	
+	cursor: text;	
+	border-radius:10px;
+	box-shadow: 0px 0px 1px 1px #888888;
+	padding-left: 10px;
+}
+
+.inputSrc {
+	border: solid 0px #000000;
+	
+	cursor: text;	
+	border-radius:10px;
+	box-shadow: 0px 0px 1px 1px #888888;
+	padding-left: 10px;
+	
+	background-image: url('../../images/ico_lupa.gif');
+	background-repeat:no-repeat;
+	padding-left:20px;
+}
+
+select{
+	width:150px;
+	background: #FFFFFF;
+	
+	box-shadow: 0px 0px 1px 1px #888888;
+	border: solid 0px #000000;
+	border-bottom-left-radius: 10px;
+	border-top-left-radius: 10px;
+	padding-left: 3px;
+	padding-top: 3px;
+}
+		
+.listRoons label{
+	display: block;
+	
+	float: left;
+	color: #000;
+	border-bottom: 1px solid #f1f1f1;
+}
+
+.dialog {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size:80%;
+}

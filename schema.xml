@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="ISO-8859-1" standalone="no"?>
+
+<database name="whiteboard" defaultIdMethod="native">
+
+	<table name="room" description="Room Table">
+  		<column name="room_id" type="integer" primaryKey="true" autoIncrement="true" required="true" description="Room id"/>
+  		<column name="name" type="varchar" size="45" required="true" description="name of a room"/>
+  		<column name="active" type="boolean" required="false" description="Indicates if the room is in use"/>
+  		<column name="active_production" type="integer" size="2" required="false" description="Indicates the current production of a room"/>
+  		<column name="code" type="varchar" size="255" required="false" description="Code"/>
+  		<column name="course" type="varchar" size="255" required="false" description="Eduquito Course Id"/>
+  		
+  		<column name="user_id" type="integer" size="10" required="false" description=""/>
+  	  	<foreign-key foreignTable="user">
+   	    	<reference local="user_id" foreign="user_id"/>
+  	  	</foreign-key>
+  		
+  	</table>
+    
+    <table name="user" description="User Table">
+  		<column name="user_id" type="integer" primaryKey="true" autoIncrement="true" required="true" description="User id"/>
+        <column name="name" type="varchar" size="45" required="true" description="name"/>
+        <column name="email" type="varchar" size="40" required="true" description="e-mail"/>
+        <column name="password" type="varchar" size="20" required="true" description="password"/>    
+        <column name="roomCreator" type="boolean" required="false" description="Right to create rooms"/>
+        
+        <unique>
+             <unique-column name="email" />
+        </unique>
+        
+ 	</table>
+ 	
+ 	<table name="production" description="Production Table">
+  		<column name="production_id" type="integer" primaryKey="true" autoIncrement="true" required="true" description="Room id"/>
+  		
+  		<column name="creation_date" type="date" required="true" description="Creation date"/>
+  		<column name="update_date" type="date" required="true" description="Latest update"/>  
+  		
+  		<column name="room_id" type="integer" size="10" required="false" description=""/>
+  	  	<foreign-key foreignTable="room">
+   	    	<reference local="room_id" foreign="room_id"/>
+  	  	</foreign-key>
+  	</table>
+ 	
+ 	
+ 	<table name="element" description="Element Table">
+  		<column name="element_id" type="integer" primaryKey="true" autoIncrement="true" required="true" description="Element id"/>
+  		
+  		<column name="value" type="longvarchar" required="false" description="Element value"/>
+  		
+  		<column name="id" type="varchar" size="10" required="false" description="The element id"/>
+  		<column name="tabindex" type="integer" required="false" description="The element tabindex value"/>
+  		<column name="css_top" type="integer" required="false" description="The CSS top of a element"/>
+  		<column name="css_left" type="integer" required="false" description="The CSS left of a element"/>
+  		<column name="css_width" type="integer" required="false" description="Width of a element"/>
+  		<column name="css_height" type="integer" required="false" description="Height of a element"/>
+  		<column name="rotation" type="integer" required="false" description="Roration of a element"/>
+  		<column name="last_change_by" type="integer" required="false" description="Change of a element"/>
+  		
+  		<column name="production_id" type="integer" size="10" required="false" description=""/>
+  	  	<foreign-key foreignTable="production">
+   	    	<reference local="production_id" foreign="production_id"/>
+  	  	</foreign-key>
+  		
+    </table>
+ 	
+ 	<table name="message" description="Message Table">
+  		<column name="message_id" type="integer" primaryKey="true" autoIncrement="true" required="true" description="Message id"/>
+  		
+  		<column name="text" type="longvarchar" required="true" description="Text"/>
+  		<column name="lang" type="varchar" size="45" required="true" description="localization"/>
+  		
+  		
+  		<column name="user_id" type="integer" size="10" required="true" description=""/>
+  	  	<foreign-key foreignTable="user">
+   	    	<reference local="user_id" foreign="user_id"/>
+  	  	</foreign-key>
+  		
+  		<column name="production_id" type="integer" size="10" required="true" description=""/>
+  	  	<foreign-key foreignTable="production">
+   	    	<reference local="production_id" foreign="production_id"/>
+  	  	</foreign-key>
+  	  	
+  	</table>
+ 	
+ 	<table name="history">
+ 		<column name="user_id" type="integer" required="true" primaryKey="true"/>
+ 		<column name="production_id" type="integer" required="true" primaryKey="true"/>
+ 		<column name="date" type="date" required="true" description="Interaction date"/>
+ 		<foreign-key foreignTable="user">
+   			<reference local="user_id" foreign="user_id"/>
+ 		</foreign-key>
+ 		<foreign-key foreignTable="production">
+   			<reference local="production_id"	foreign="production_id"/>
+ 		</foreign-key>
+ 	</table>
+ 	
+ 	
+ 	<table name="production_history">
+ 		<column name="production_history_id" type="integer" primaryKey="true" autoIncrement="true" required="true" description="id"/>
+ 		<column name="user_id" type="integer" required="true" />
+ 		<column name="production_id" type="integer" required="true" />
+ 		<column name="action" type="varchar" size="45" required="true" description="name"/>
+ 		<column name="date" type="date" required="true" description="Interaction date"/>
+ 		<column name="value" type="varchar" size="255" required="true" description="name"/>
+ 		
+ 		<foreign-key foreignTable="user">
+   			<reference local="user_id" foreign="user_id"/>
+ 		</foreign-key>
+ 		<foreign-key foreignTable="production">
+   			<reference local="production_id"	foreign="production_id"/>
+ 		</foreign-key>
+ 		
+ 	</table>
+ 	
+ 	
+ 	<table name="online">
+ 		<column name="user_id" type="integer" required="true" primaryKey="true"/>
+ 		<column name="production_id" type="integer" required="true" primaryKey="true"/>
+ 		<column name="transmit" type="boolean" required="false" description="Indicates the user that is the presenter"/>
+ 		<foreign-key foreignTable="user">
+   			<reference local="user_id" foreign="user_id"/>
+ 		</foreign-key>
+ 		<foreign-key foreignTable="production">
+   			<reference local="production_id"	foreign="production_id"/>
+ 		</foreign-key>
+	</table>
+ 	
+ 	
+ 	<table name="permission">
+ 		<column name="user_id" type="integer" required="true" primaryKey="true"/>
+ 		<column name="room_id" type="integer" required="true" primaryKey="true"/>
+ 		<foreign-key foreignTable="user">
+   			<reference local="user_id" foreign="user_id"/>
+ 		</foreign-key>
+ 		<foreign-key foreignTable="room">
+   			<reference local="room_id"	foreign="room_id"/>
+ 		</foreign-key>
+ 	</table>
+    
+</database>

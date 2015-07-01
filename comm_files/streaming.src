@@ -1,0 +1,281 @@
+<?xml version="1.0" encoding="utf-8"?>
+<mx:Application xmlns:mx="http://www.adobe.com/2006/mxml"
+				layout="absolute"
+				horizontalAlign="left"
+				backgroundColor="#f6f6f6"
+				
+				creationComplete="init()"
+				viewSourceURL="srcview/index.html" height="170" width="218">
+	
+	<mx:Script>
+		<![CDATA[
+			import flash.events.Event;
+			import flash.net.URLLoader;
+			import flash.net.URLLoaderDataFormat;
+			import flash.net.URLRequest;
+			
+			import mx.charts.CategoryAxis;
+			import mx.controls.Alert;
+			
+			import org.osmf.media.LoadableElementBase;
+			
+			//Guarda informaçao sobre conexão;
+			private var connected:String="";
+			
+			// Conexão com o Red5
+			private var netConnection:NetConnection;
+			
+			// NetStream responsável por apresentar o vídeo
+			private var netStream_play:NetStream;
+			
+			// NetStream responsável por publicar o vídeo
+			private var netStream_publish:NetStream;
+			
+			// Componente para apresnetar o vídeo
+			private var video:Video;
+			
+			// Nome da publicação do vídeo
+			private var streamingNome:String="wbVideo";
+			
+			// URL do serviço do red5
+			private var host:String="rtmp://whiteboard.inf.poa.ifrs.edu.br/fitcDemo";
+			
+			// Contador de tentivas de conexao
+			private var cont:int=0;
+			
+			// Contador de tentivas de conexao
+			private var maxAttempt:int=5;
+			
+			// Mensagem de erro apos tentativas de conexao
+			private var errorConnectMessage:String = " attempts, unsuccessfully.\nTry later and refresh your browser";
+			
+			/**
+			 * Executa após carregar o aplicativo e inicia a aplicação 
+			 */
+			private function init():void
+			{
+				getIdProduction();
+				getHost();
+				
+				video=new Video();
+				video.height=uiCaixaDoVideo.height;
+				video.width=uiCaixaDoVideo.width;
+				
+				ExternalInterface.addCallback("publishStreaming", publishStreaming);
+				ExternalInterface.addCallback("stopPublishStreaming", stopPublishStreaming);
+				ExternalInterface.addCallback("playStreaming", playStreaming);
+				ExternalInterface.addCallback("stopStreaming", stopStreaming);
+				
+				connect();
+				
+			}
+			
+			/**
+			 * Faz a conexão
+			 */
+			private function connect():void{
+				if ( host.length < 15 )
+				{
+					Alert.show( "Small URL\nURL:"+host )
+					return;
+				}
+				if ( netConnection != null ){
+					netConnection=null;
+				}
+				try{
+					netConnection=new NetConnection();
+					netConnection.addEventListener( NetStatusEvent.NET_STATUS, netStatus);
+					netConnection.addEventListener( AsyncErrorEvent.ASYNC_ERROR, asyncError );
+					netConnection.addEventListener( IOErrorEvent.IO_ERROR, ioError);
+					netConnection.addEventListener( SecurityErrorEvent.SECURITY_ERROR, secError);
+					netConnection.connect( host );
+					netConnection.client=this;
+					
+				}catch(error:Error){
+					Alert("Don't possible connect to red5 server!");
+				}
+			}
+			
+			/**
+			 * Método que recebe o Status da conexão
+			 */
+			private function netStatus( e:NetStatusEvent ):void
+			{
+				switch ( e.info.code )
+				{
+					case "NetConnection.Connect.Success":
+						connected = "success";
+						//DEBUG
+						//Alert.show("Success, connected to\n"+host);
+						playStreaming();
+						break;
+					case "NetConnection.Connect.Closed":
+						connected = "closed";
+						//DEBUG
+						//Alert.show("Closed");
+						cont++;
+						if(cont<maxAttempt)
+							connect();
+						else
+							Alert.show(cont+errorConnectMessage);
+						break;
+					case "NetConnection.Connect.Rejected":
+						connected = "rejected";
+						//DEBUG
+						//Alert.show("Rejected");
+						cont++;
+						if(cont<maxAttempt)
+							connect();
+						else
+							Alert.show(cont+errorConnectMessage);
+						break;
+					case "NetConnection.Connect.Failed":
+						connected = "failed";
+						//DEBUG
+						//Alert.show("Failed");
+						cont++;
+						if(cont<maxAttempt)
+							connect();
+						else
+							Alert.show(cont+errorConnectMessage);
+						break;
+					default:
+
+				}
+				
+			}
+			
+			/**
+			 * Método responsável por tratar os AsyncErrorEvent
+			 */
+			private function asyncError( e:AsyncErrorEvent ):void
+			{
+				//DEBUG
+				//trace( e )
+				//Alert.show("erro async" + e );
+			}
+			
+			private function ioError( e:IOErrorEvent ):void{
+				//DEBUG
+				//Alert.show( e.eventPhase + "\n" + e.text);
+			}
+				
+			private function secError( e:SecurityErrorEvent ):void{
+				//DEBUG
+				//Alert.show( e.eventPhase + "\n" + e.text);
+			}
+				
+			/**
+			 * Método responsável por tratar os SyncEvent
+			 */
+			private function OnSync( e:SyncEvent ):void
+			{
+				//DEBUG
+				//trace( e )
+				//Alert.show("erro Sync" + e );
+			}
+			
+			/**
+			 * Trata o click do Botão Publicar WebCam
+			 *
+			 */
+			private function publishStreaming():void{
+				if (connected == "success"){
+					try{
+						netStream_publish=new NetStream( netConnection );
+						netStream_publish.attachCamera( Camera.getCamera());
+						var microphone:Microphone = Microphone.getMicrophone();
+						netStream_publish.attachAudio( microphone );
+						
+						// Nome do stream que será publicado
+						netStream_publish.publish( streamingNome );
+						
+					}catch(error:Error){
+						//DEBUG
+						//Alert.show("Don't possible publish your webcam,\ncheck streampublish");
+					
+					}
+				}
+			}
+			
+			/**
+			 * Trata o click do Botão Publicar WebCam
+			 *
+			 */
+			private function stopPublishStreaming():void{
+				if(connected == "success"){
+					try{
+						netStream_publish.close();
+						
+					}catch(error:Error){
+						//DEBUG
+						//Alert.show("Error in stopPublish, check streampublish");
+					
+					}
+					netStream_publish=null;
+				}
+			}
+			
+			/**
+			 * Trata o click do Botão Play
+			 *
+			 */
+			private function playStreaming():void{
+				try{
+					//Habilita o stream para vizualizar
+					netStream_play = new NetStream( netConnection );
+					netStream_play.play( streamingNome );
+					video.attachNetStream( netStream_play );
+					uiCaixaDoVideo.addChild( video );
+				
+				}catch(error:Error){
+					//DEBUG
+					//Alert.show("Don't possible play video");
+				}
+			}
+			
+			/**
+			 * Trata o click do Botão Stop
+			 *
+			 */
+			private function stopStreaming():void{
+				try{
+					netStream_play.close();
+					video.attachNetStream(null);
+					uiCaixaDoVideo.removeChild(video);
+				
+				}catch(error:Error){
+					//DEBUG
+					//Alert.show("Error in stop, check streamplay");
+				}
+			}
+			
+			/**
+			 * Retorna o id da producao e o adiciona a string do stream que sera transmitido
+			 *
+			 */
+			private function getIdProduction():void{
+				var idProduction:Number = ExternalInterface.call('getIdProduction');
+				streamingNome = streamingNome + idProduction;
+			}
+			
+			/**
+			 * Retorna a url do servidor red5 para fazer a conexao
+			 *
+			 */
+			public function getHost():void{
+				if(ExternalInterface.call('getRed5Server')!=null)
+					host = ExternalInterface.call('getRed5Server');
+			}
+		]]>
+	</mx:Script>
+	<mx:VBox height="100%" width="100%">
+		<mx:Canvas left="10"
+				   top="85"
+				   width="100%"
+				   height="100%"
+				   backgroundColor="#000000">
+			<mx:UIComponent width="100%" height="100%" id="uiCaixaDoVideo"/>
+		</mx:Canvas>
+	</mx:VBox>
+</mx:Application>

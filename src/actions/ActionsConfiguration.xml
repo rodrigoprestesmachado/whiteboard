@@ -1,0 +1,169 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<action-mappings>
+
+ 	<action authentication="true" >
+		<name>start</name>
+		<type>StartRoomAction</type>
+        <role></role>
+        <forwards>
+		    <forward name="success" path=".startRoomAction" />
+		</forwards>
+	</action>
+	
+	<action authentication="true" ssl="false" >
+		<name>loginForm</name>
+		<type>ForwardAction</type>
+        <role></role>
+        <forwards>
+		    <forward name="success" path=".showLoginForm" />
+		</forwards>
+	</action>
+	
+	<action ssl="false" >
+		<name>login</name>
+		<type>LoginAction</type>
+        <role></role>
+        <forwards>
+		    <forward name="success" path=".showLoginForm" />
+		    <forward name="error" path=".error" />
+		</forwards>
+	</action>
+	
+	<action ssl="false" >
+		<name>loginPlace</name>
+		<type>LoginPlaceAction</type>
+        <role></role>
+        <forwards>
+       		<forward name="success" path=".showLoginForm" />
+		    <forward name="error" path=".error" />
+		</forwards>
+	</action>
+	
+	<action ssl="false" >
+		<name>createdUserSuccess</name>
+		<type>ForwardAction</type>
+        <role></role>
+        <forwards>
+       		<forward name="success" path=".createdUserSuccess" />
+		</forwards>
+	</action>
+	
+	<action ssl="false" >
+		<name>loginEduquito</name>
+		<type>LoginEduquitoAction</type>
+        <role></role>
+        <forwards>
+       		<forward name="success" path=".startRoomAction" />
+		    <forward name="error" path=".error" />
+		</forwards>
+	</action>
+	
+	<action ssl="false" >
+		<name>loginPlataform</name>
+		<type>LoginPlataformAction</type>
+        <role></role>
+        <forwards>
+       		<forward name="success" path=".startRoomAction" />
+		    <forward name="error" path=".error" />
+		</forwards>
+	</action>
+	
+	<action ssl="false" >
+		<name>logout</name>
+		<type>LogoutAction</type>
+        <role></role>
+        <forwards>
+		    <forward name="success" path=".showLoginForm" />
+		</forwards>
+	</action>
+	
+	<action authentication="true" >
+		<name>join</name>
+		<type>JoinRoomAction</type>
+        <role></role>
+        <forwards>
+		    <forward name="success" path=".startRoomAction" />
+		    <forward name="error" path=".error" />
+		</forwards>
+	</action>
+	
+	<action ssl="false" >
+		<name>register</name>
+		<type>RegisterAction</type>
+        <role></role>
+        <forwards>
+		    <forward name="success" path=".showLoginForm" />
+		    <forward name="error" path=".error" />
+		</forwards>
+	</action>
+	
+	<action ssl="false" >
+		<name>createRoom</name>
+		<type>CreateRoomAction</type>
+        <role></role>
+        <forwards>
+		    <forward name="success" path=".showRefreshPage" />
+		    <forward name="error" path=".error" />
+		</forwards>
+	</action>
+		
+	<action ssl="false" >
+		<name>updateRoom</name>
+		<type>UpdateRoomAction</type>
+        <role></role>
+        <forwards>
+		    <forward name="success" path=".showRefreshPage" />
+		    <forward name="error" path=".error" />
+		</forwards>
+	</action>
+	
+	<action ssl="false" >
+		<name>updateUser</name>
+		<type>UpdateUserAction</type>
+        <role></role>
+        <forwards>
+		    <forward name="success" path=".showRefreshPage" />
+		    <forward name="error" path=".error" />
+		</forwards>
+	</action>
+	
+	<action ssl="false" >
+		<name>enterWithCode</name>
+		<type>EnterWithCodeAction</type>
+        <role></role>
+        <forwards>
+        	<forward name="success" path=".startRoomAction" />
+		    <forward name="error" path=".error" />
+		</forwards>
+	</action>	
+	
+	<action ssl="false" >
+		<name>inviteFriends</name>
+		<type>InviteFriendsAction</type>
+        <role></role>
+        <forwards>
+        	<forward name="success" path=".startRoomAction" />
+		    <forward name="error" path=".error" />
+		</forwards>
+	</action>	
+	
+	<action ssl="false" >
+		<name>exitRoom</name>
+		<type>ExitRoomAction</type>
+        <role></role>
+        <forwards>
+        	<forward name="success" path=".showUserPage" />
+		    <forward name="error" path=".error" />
+		</forwards>
+	</action>	
+	
+	<action authentication="true" ssl="false" >
+		<name>credits</name>
+		<type>ForwardAction</type>
+        <role></role>
+        <forwards>
+		    <forward name="success" path=".showCredits" />
+		</forwards>
+	</action>	
+	 	
+</action-mappings>

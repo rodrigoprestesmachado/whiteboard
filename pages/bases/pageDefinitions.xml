@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<page-definitions>
+
+	<definition>
+		<name>.startRoomAction</name>
+		<base>pages/bases/roomTemplate.php</base>
+	</definition>
+	
+	<definition>
+		<name>.showLoginForm</name>
+		<base>pages/bases/basicTemplate.php</base>
+		<put pageKey="content" value="pages/loginForm.php" />
+	</definition>
+	
+	<definition>
+		<name>.showUserPage</name>
+		<base>pages/bases/basicTemplate.php</base>
+		<put pageKey="content" value="pages/userPage.php" />
+	</definition>
+	
+	<definition>
+		<name>.showRefreshPage</name>
+		<base>pages/bases/basicTemplate.php</base>
+		<put pageKey="content" value="pages/refreshPage.php" />
+	</definition>
+	
+	<definition>
+		<name>.showCredits</name>
+		<base>pages/bases/basicTemplate.php</base>
+		<put pageKey="content" value="pages/credits.php" />
+	</definition>
+	
+	<definition>
+		<name>.error</name>
+		<base>pages/bases/basicTemplate.php</base>
+		<put pageKey="content" value="" />
+	</definition>
+	
+	<definition>
+		<name>.createdUserSuccess</name>
+		<base>pages/bases/basicTemplate.php</base>
+		<put pageKey="content" value="pages/createdUserSuccess.php" />
+	</definition>
+	
+</page-definitions>
