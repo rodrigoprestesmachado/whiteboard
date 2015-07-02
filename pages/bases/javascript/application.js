@@ -15,7 +15,7 @@
  */
 
 // URL of red5 server
-var red5Server = "rtmp://whiteboard.inf.poa.ifrs.edu.br/fitcDemo";
+var red5Server = "rtmp://localhost/fitcDemo";
 
 // WebSocket Client
 var ws = "";
@@ -28,9 +28,9 @@ var lastTabIndex = 5006;
 function startSocket(){
 	
 	if (window.MozWebSocket)
-		ws = new MozWebSocket("ws://whiteboard.inf.poa.ifrs.edu.br:9090/");
+		ws = new MozWebSocket("ws://localhost:9090/");
 	else
-		ws = new WebSocket("ws://whiteboard.inf.poa.ifrs.edu.br:9090/");
+		ws = new WebSocket("ws://localhost:9090/");
 		
 	ws.onopen = function(){
 		
