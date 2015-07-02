@@ -24,7 +24,7 @@ CREATE TABLE `room`
 	CONSTRAINT `room_FK_1`
 		FOREIGN KEY (`user_id`)
 		REFERENCES `user` (`user_id`)
-)Type=MyISAM COMMENT='Room Table';
+) COMMENT='Room Table';
 
 #-----------------------------------------------------------------------------
 #-- user
@@ -42,7 +42,7 @@ CREATE TABLE `user`
 	`roomCreator` INTEGER COMMENT 'Right to create rooms',
 	PRIMARY KEY (`user_id`),
 	UNIQUE KEY `user_U_1` (`email`)
-)Type=MyISAM COMMENT='User Table';
+) COMMENT='User Table';
 
 #-----------------------------------------------------------------------------
 #-- production
@@ -62,7 +62,7 @@ CREATE TABLE `production`
 	CONSTRAINT `production_FK_1`
 		FOREIGN KEY (`room_id`)
 		REFERENCES `room` (`room_id`)
-)Type=MyISAM COMMENT='Production Table';
+) COMMENT='Production Table';
 
 #-----------------------------------------------------------------------------
 #-- element
@@ -89,7 +89,7 @@ CREATE TABLE `element`
 	CONSTRAINT `element_FK_1`
 		FOREIGN KEY (`production_id`)
 		REFERENCES `production` (`production_id`)
-)Type=MyISAM COMMENT='Element Table';
+) COMMENT='Element Table';
 
 #-----------------------------------------------------------------------------
 #-- message
@@ -114,7 +114,7 @@ CREATE TABLE `message`
 	CONSTRAINT `message_FK_2`
 		FOREIGN KEY (`production_id`)
 		REFERENCES `production` (`production_id`)
-)Type=MyISAM COMMENT='Message Table';
+)  COMMENT='Message Table';
 
 #-----------------------------------------------------------------------------
 #-- history
@@ -136,7 +136,7 @@ CREATE TABLE `history`
 	CONSTRAINT `history_FK_2`
 		FOREIGN KEY (`production_id`)
 		REFERENCES `production` (`production_id`)
-)Type=MyISAM;
+);
 
 #-----------------------------------------------------------------------------
 #-- production_history
@@ -164,7 +164,7 @@ CREATE TABLE `production_history`
 	CONSTRAINT `production_history_FK_2`
 		FOREIGN KEY (`production_id`)
 		REFERENCES `production` (`production_id`)
-)Type=MyISAM;
+);
 
 #-----------------------------------------------------------------------------
 #-- online
@@ -186,7 +186,7 @@ CREATE TABLE `online`
 	CONSTRAINT `online_FK_2`
 		FOREIGN KEY (`production_id`)
 		REFERENCES `production` (`production_id`)
-)Type=MyISAM;
+);
 
 #-----------------------------------------------------------------------------
 #-- permission
@@ -207,7 +207,7 @@ CREATE TABLE `permission`
 	CONSTRAINT `permission_FK_2`
 		FOREIGN KEY (`room_id`)
 		REFERENCES `room` (`room_id`)
-)Type=MyISAM;
+);
 
 # This restores the fkey checks, after having unset them earlier
 SET FOREIGN_KEY_CHECKS = 1;
