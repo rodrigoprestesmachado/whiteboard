@@ -19,7 +19,7 @@ var WhiteBoardServer = require('./WhiteBoardServer.js');
 // Connection parameters
 var Client = require('mysql').Client,
 client = new Client();
-client.port = '3306';  
+client.port = '/var/run/mysqld/mysqld.sock';  
 client.user = 'wb';
 client.password = 'wb';
 client.useDatabase('whiteboard');
