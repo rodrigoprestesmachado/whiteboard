@@ -32,7 +32,7 @@ function createMidiatecaDlg() {
 		autoOpen : false
 	});
 	
-	$('<iframe id="iFrameMidiateca" name="iFrameMidiateca" src="http://whiteboard.inf.poa.ifrs.edu.br/midiateca/index.php/midiateca" height="520" width="960"></iframe>')
+	$('<iframe id="iFrameMidiateca" name="iFrameMidiateca" src="http://place.niee.ufrgs.br/place/com/midiateca/buscar_qb" height="520" width="960"></iframe>')
 	.appendTo('#dialog-modal');
 }
 
